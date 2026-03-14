@@ -1,0 +1,9 @@
+
+stateDiagram-v2
+  [*] --> DRAFT
+  DRAFT --> PENDING_ADVISOR_APPROVAL: submit
+  PENDING_ADVISOR_APPROVAL --> APPROVED: advisorApprove
+  PENDING_ADVISOR_APPROVAL --> REJECTED: advisorReject
+  APPROVED --> DROPPED: drop
+  REJECTED --> DRAFT: editAndResubmit
+```
